@@ -1,3 +1,4 @@
+import 'package:dashed_circular_progress_bar/dashed_circular_progress_bar.dart';
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
@@ -74,33 +75,85 @@ class CreditScore extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
         child: Column(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            Stack(
               children: [
-                Text(
-                  '400',
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodyLarge
-                      ?.copyWith(color: AppColors.neutralLight3),
+                DashedCircularProgressBar.aspectRatio(
+                  aspectRatio: 1.1,
+                  startAngle: 270,
+                  sweepAngle: 180,
+                  progress: 90,
+                  foregroundColor: AppColors.primary,
+                  backgroundColor: AppColors.neutralLight1,
+                  foregroundStrokeWidth: 5,
+                  backgroundStrokeWidth: 5,
+                  backgroundGapSize: 5,
+                  foregroundGapSize: 10,
+                  foregroundDashSize: 14,
+                  animation: true,
+                  child: SizedBox(
+                    height: 96,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Good',
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyLarge
+                              ?.copyWith(color: AppColors.neutralLight),
+                        ),
+                        Text(
+                          '660',
+                          style: Theme.of(context)
+                              .textTheme
+                              .headlineMedium
+                              ?.copyWith(
+                                  color: AppColors.neutral,
+                                  fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          '+6pts',
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyLarge
+                              ?.copyWith(color: AppColors.primary),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
-                Text(
-                  'Last updated on ${date.day}-${date.month}-${date.year}',
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodyLarge
-                      ?.copyWith(color: AppColors.neutralLight4),
-                ),
-                Text(
-                  '850',
-                  style: Theme.of(context)
-                      .textTheme
-                      .bodyLarge
-                      ?.copyWith(color: AppColors.neutralLight3),
+                Positioned(
+                  top: 230,
+                  width: MediaQuery.of(context).size.width,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        '400',
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyLarge
+                            ?.copyWith(color: AppColors.neutralLight3),
+                      ),
+                      Text(
+                        'Last updated on ${date.day}-${date.month}-${date.year}',
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyLarge
+                            ?.copyWith(color: AppColors.neutralLight4),
+                      ),
+                      Text(
+                        '850',
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyLarge
+                            ?.copyWith(color: AppColors.neutralLight3),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
-            const SizedBox(height: 40),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
               decoration: BoxDecoration(
