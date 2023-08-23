@@ -80,7 +80,7 @@ flutter:
   fonts:
     - family: Averta
       fonts:
-        - asset: fonts/AvertaDemo-Regular.ttf
+        - asset: fonts/AvertaDemo-Regular.otf
        
   #   - family: Trajan Pro
   #     fonts:
