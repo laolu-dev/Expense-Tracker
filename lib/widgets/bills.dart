@@ -3,7 +3,7 @@ import 'package:demo/constants.dart';
 
 class Bills extends StatefulWidget {
   final Color widgetColor;
-  final IconData billIconWidget;
+  final String billIconWidget;
   final String widgetName;
   final int totalBudget;
   final List<Widget> expenses;
@@ -23,14 +23,15 @@ class _BillsState extends State<Bills> {
   Widget expenseOverhead() => Row(
         children: [
           Container(
-            padding: const EdgeInsets.all(12),
-            margin: const EdgeInsets.only(right: 15),
+            width: 45,
+            height: 45,
             decoration: BoxDecoration(
-              color: widget.widgetColor.withOpacity(.2),
-              borderRadius: BorderRadius.circular(16),
+              color: widget.widgetColor.withOpacity(.1),
+              borderRadius: BorderRadius.circular(14),
             ),
-            child: Icon(widget.billIconWidget, color: widget.widgetColor),
+            child: Image.asset(widget.billIconWidget),
           ),
+          const SizedBox(width: 10),
           Expanded(
             child: Text(
               widget.widgetName,
@@ -57,16 +58,16 @@ class _BillsState extends State<Bills> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(24),
+      padding: const EdgeInsets.fromLTRB(20, 20, 24, 20),
       decoration: BoxDecoration(
           border: Border.all(color: AppColors.neutralLight1),
-          borderRadius: BorderRadius.circular(16),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.white.withOpacity(0),
+          borderRadius: BorderRadius.circular(18),
+          boxShadow: const [
+             BoxShadow(
+              color: Color.fromRGBO(0, 0, 0, .06),
               blurRadius: 40,
               spreadRadius: -10,
-              offset: const Offset(0, 25),
+              offset: Offset(0, 25),
             )
           ]),
       child: Column(children: body()),

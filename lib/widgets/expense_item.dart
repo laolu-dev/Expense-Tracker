@@ -31,10 +31,10 @@ class ExpenseItem extends StatelessWidget {
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
                       color: AppColors.neutral,
                       fontSize: 16,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w700,
                     ),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 12),
               LinearProgressIndicator(
                   color: expenseItemColor,
                   value: (totalAllowance - remainder) / totalAllowance,
@@ -51,10 +51,10 @@ class ExpenseItem extends StatelessWidget {
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
                       color: AppColors.neutral,
                       fontSize: 16,
-                      fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.w700,
                     ),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 5),
               Text(
                 'Left \$$remainder',
                 style: Theme.of(context)

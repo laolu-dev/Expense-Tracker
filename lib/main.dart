@@ -1,5 +1,7 @@
+import 'package:demo/constants.dart';
 import 'package:demo/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,19 +16,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Test',
       theme: ThemeData(
-        appBarTheme: const AppBarTheme(
+        textTheme: GoogleFonts.dmSansTextTheme(),
+        appBarTheme: AppBarTheme(
           color: Colors.white,
           elevation: 0,
           centerTitle: true,
-          iconTheme:
-              IconThemeData(color: Color.fromRGBO(44, 38, 70, 1), size: 32),
-          actionsIconTheme:
-              IconThemeData(color: Color.fromRGBO(44, 38, 70, 1), size: 32),
-          titleTextStyle: TextStyle(
-            color: Color.fromRGBO(44, 38, 70, 1),
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-          ),
+          iconTheme: IconThemeData(color: AppColors.neutral, size: 32),
+          actionsIconTheme: IconThemeData(color: AppColors.neutral, size: 32),
+          titleTextStyle: GoogleFonts.dmSans(
+              color: AppColors.neutral,
+              fontSize: 18,
+              fontWeight: FontWeight.w700),
         ),
       ),
       initialRoute: Screen.auth.name,

@@ -1,6 +1,7 @@
 import 'package:demo/constants.dart';
 import 'package:demo/routes.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({super.key});
@@ -38,13 +39,18 @@ class SignIn extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Text(
-                      'Be happy with you finance',
-                      textAlign: TextAlign.center,
-                      style: Theme.of(context)
-                          .textTheme
-                          .displaySmall
-                          ?.copyWith(color: Colors.white),
+                    SizedBox(
+                      width: 223,
+                      child: Text(
+                        'Be happy with you finance',
+                        textAlign: TextAlign.center,
+                        style: GoogleFonts.interTextTheme()
+                            .displaySmall
+                            ?.copyWith(
+                                color: Colors.white,
+                                fontSize: 32,
+                                fontWeight: FontWeight.w200),
+                      ),
                     ),
                     const SizedBox(height: 60),
                     TextButton(
@@ -52,16 +58,18 @@ class SignIn extends StatelessWidget {
                       style: TextButton.styleFrom(
                         backgroundColor: AppColors.primary,
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(10),
                         ),
-                        minimumSize: const Size(double.infinity, 54),
+                        minimumSize: const Size(312, 50),
                       ),
                       child: Text(
                         'Sign up',
-                        style: Theme.of(context)
-                            .textTheme
+                        style: GoogleFonts.interTextTheme()
                             .labelLarge
-                            ?.copyWith(color: Colors.white, fontSize: 16),
+                            ?.copyWith(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w200),
                       ),
                     ),
                     const SizedBox(height: 20),
@@ -71,16 +79,18 @@ class SignIn extends StatelessWidget {
                       style: TextButton.styleFrom(
                         shape: RoundedRectangleBorder(
                           side: const BorderSide(color: Colors.white),
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(10),
                         ),
-                        minimumSize: const Size(double.infinity, 54),
+                        minimumSize: const Size(312, 50),
                       ),
                       child: Text(
                         'Login',
-                        style: Theme.of(context)
-                            .textTheme
+                        style: GoogleFonts.interTextTheme()
                             .labelLarge
-                            ?.copyWith(color: Colors.white, fontSize: 16),
+                            ?.copyWith(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w200),
                       ),
                     )
                   ],

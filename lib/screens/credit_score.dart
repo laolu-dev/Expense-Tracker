@@ -1,4 +1,3 @@
-import 'package:dashed_circular_progress_bar/dashed_circular_progress_bar.dart';
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
@@ -28,9 +27,11 @@ class CreditScore extends StatelessWidget {
                 Text(
                   criteria,
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      fontWeight: FontWeight.bold, color: AppColors.neutral),
+                      fontWeight: FontWeight.w700,
+                      color: AppColors.neutral,
+                      fontSize: 16),
                 ),
-                const SizedBox(height: 15),
+                const SizedBox(height: 5),
                 Text(
                   status,
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
@@ -46,14 +47,16 @@ class CreditScore extends StatelessWidget {
                 Text(
                   score,
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                      fontWeight: FontWeight.bold, color: AppColors.neutral),
+                      fontWeight: FontWeight.w700,
+                      color: AppColors.neutral,
+                      fontSize: 16),
                 ),
-                const SizedBox(height: 15),
+                const SizedBox(height: 5),
                 Text(
                   meta,
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                       color: status == "Good"
-                          ? AppColors.greenAccent
+                          ? AppColors.neutralLight4
                           : AppColors.orange),
                 ),
               ],
@@ -75,90 +78,120 @@ class CreditScore extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
         child: Column(
           children: [
-            Stack(
+            //TODO: Add curved bar
+
+            // Stack(
+            //   children: [
+            //     // DashedCircularProgressBar.aspectRatio(
+            //     //   aspectRatio: 1.1,
+            //     //   startAngle: 270,
+            //     //   sweepAngle: 180,
+            //     //   progress: 90,
+            //     //   foregroundColor: AppColors.primary,
+            //     //   backgroundColor: AppColors.neutralLight1,
+            //     //   foregroundStrokeWidth: 5,
+            //     //   backgroundStrokeWidth: 5,
+            //     //   backgroundGapSize: 5,
+            //     //   foregroundGapSize: 10,
+            //     //   foregroundDashSize: 14,
+            //     //   animation: true,
+            //     //   child: SizedBox(
+            //     //     height: 96,
+            //     //     child: Column(
+            //     //       mainAxisAlignment: MainAxisAlignment.center,
+            //     //       children: [
+            //     //         Text(
+            //     //           'Good',
+            //     //           style: Theme.of(context)
+            //     //               .textTheme
+            //     //               .bodyLarge
+            //     //               ?.copyWith(color: AppColors.neutralLight),
+            //     //         ),
+            //     //         Text(
+            //     //           '660',
+            //     //           style: Theme.of(context)
+            //     //               .textTheme
+            //     //               .headlineMedium
+            //     //               ?.copyWith(
+            //     //                   color: AppColors.neutral,
+            //     //                   fontWeight: FontWeight.w700,
+            //     //                   fontSize: 48),
+            //     //         ),
+            //     //         Text(
+            //     //           '+6pts',
+            //     //           style: Theme.of(context)
+            //     //               .textTheme
+            //     //               .bodyLarge
+            //     //               ?.copyWith(color: AppColors.primary),
+            //     //         ),
+            //     //       ],
+            //     //     ),
+            //     //   ),
+            //     // ),
+            //     Positioned(
+            //       top: 230,
+            //       width: MediaQuery.of(context).size.width,
+            //       child: Row(
+            //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //         children: [
+            //           Text(
+            //             '400',
+            //             style: Theme.of(context)
+            //                 .textTheme
+            //                 .bodyLarge
+            //                 ?.copyWith(color: AppColors.neutralLight3),
+            //           ),
+            //           Text(
+            //             'Last updated on ${date.day}-${date.month}-${date.year}',
+            //             style: Theme.of(context)
+            //                 .textTheme
+            //                 .bodyLarge
+            //                 ?.copyWith(color: AppColors.neutralLight4),
+            //           ),
+            //           Text(
+            //             '850',
+            //             style: Theme.of(context)
+            //                 .textTheme
+            //                 .bodyLarge
+            //                 ?.copyWith(color: AppColors.neutralLight3),
+            //           ),
+            //         ],
+            //       ),
+            //     ),
+            //   ],
+            // ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                DashedCircularProgressBar.aspectRatio(
-                  aspectRatio: 1.1,
-                  startAngle: 270,
-                  sweepAngle: 180,
-                  progress: 90,
-                  foregroundColor: AppColors.primary,
-                  backgroundColor: AppColors.neutralLight1,
-                  foregroundStrokeWidth: 5,
-                  backgroundStrokeWidth: 5,
-                  backgroundGapSize: 5,
-                  foregroundGapSize: 10,
-                  foregroundDashSize: 14,
-                  animation: true,
-                  child: SizedBox(
-                    height: 96,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Good',
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyLarge
-                              ?.copyWith(color: AppColors.neutralLight),
-                        ),
-                        Text(
-                          '660',
-                          style: Theme.of(context)
-                              .textTheme
-                              .headlineMedium
-                              ?.copyWith(
-                                  color: AppColors.neutral,
-                                  fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          '+6pts',
-                          style: Theme.of(context)
-                              .textTheme
-                              .bodyLarge
-                              ?.copyWith(color: AppColors.primary),
-                        ),
-                      ],
-                    ),
-                  ),
+                Text(
+                  '400',
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyLarge
+                      ?.copyWith(color: AppColors.neutralLight3),
                 ),
-                Positioned(
-                  top: 230,
-                  width: MediaQuery.of(context).size.width,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        '400',
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyLarge
-                            ?.copyWith(color: AppColors.neutralLight3),
-                      ),
-                      Text(
-                        'Last updated on ${date.day}-${date.month}-${date.year}',
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyLarge
-                            ?.copyWith(color: AppColors.neutralLight4),
-                      ),
-                      Text(
-                        '850',
-                        style: Theme.of(context)
-                            .textTheme
-                            .bodyLarge
-                            ?.copyWith(color: AppColors.neutralLight3),
-                      ),
-                    ],
-                  ),
+                Text(
+                  'Last updated on ${date.day}-${date.month}-${date.year}',
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyLarge
+                      ?.copyWith(color: AppColors.neutralLight4),
+                ),
+                Text(
+                  '850',
+                  style: Theme.of(context)
+                      .textTheme
+                      .bodyLarge
+                      ?.copyWith(color: AppColors.neutralLight3),
                 ),
               ],
             ),
+            const SizedBox(height: 20),
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+              padding: const EdgeInsets.fromLTRB(14, 20, 14, 20),
               decoration: BoxDecoration(
                   border: Border.all(color: AppColors.neutralLight1),
-                  borderRadius: BorderRadius.circular(16),
+                  borderRadius: BorderRadius.circular(18),
                   boxShadow: [
                     BoxShadow(
                       color: Colors.white.withOpacity(0),

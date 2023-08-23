@@ -28,9 +28,15 @@ class BillsPage extends StatelessWidget {
           bottom: TabBar(
             unselectedLabelColor: AppColors.neutral,
             labelColor: AppColors.primary,
+            labelStyle: Theme.of(context).textTheme.bodySmall?.copyWith(
+                fontFamily: 'Averta',
+                fontWeight: FontWeight.w600,
+                color: AppColors.neutral),
             indicatorColor: AppColors.primary,
             tabs: const [
-              Tab(text: 'Bills'),
+              Tab(
+                text: 'Bills',
+              ),
               Tab(text: 'Payments'),
               Tab(text: 'Subscription')
             ],

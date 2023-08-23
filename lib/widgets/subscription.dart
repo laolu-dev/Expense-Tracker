@@ -1,5 +1,6 @@
 import 'package:demo/model/subscribed_item.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../constants.dart';
 
@@ -67,14 +68,16 @@ class _SubscriptionState extends State<Subscription> {
           Text(
             '\$$total',
             style: Theme.of(context).textTheme.headlineLarge?.copyWith(
-                color: AppColors.neutral, fontWeight: FontWeight.bold),
+                color: AppColors.neutral,
+                fontWeight: FontWeight.w700,
+                fontSize: 48),
           ),
           const SizedBox(height: 40),
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
+            padding: const EdgeInsets.fromLTRB(12, 20, 14, 20),
             decoration: BoxDecoration(
                 border: Border.all(color: AppColors.neutralLight1),
-                borderRadius: BorderRadius.circular(16),
+                borderRadius: BorderRadius.circular(18),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.white.withOpacity(0),
@@ -91,7 +94,13 @@ class _SubscriptionState extends State<Subscription> {
                       child: ListTile(
                         leading: Image.asset(e.picture),
                         title: Text(e.name),
-                        subtitle: Text('\$${e.amountPerMonth}/mo'),
+                        subtitle: Text(
+                          '\$${e.amountPerMonth}/mo',
+                          style: GoogleFonts.dmSans(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 16,
+                              color: AppColors.neutral),
+                        ),
                         trailing:
                             const Icon(Icons.navigate_next_rounded, size: 32),
                       ),

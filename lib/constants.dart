@@ -27,6 +27,7 @@ class AppColors {
   static Color appBlack = const Color.fromRGBO(23, 19, 40, 1);
   static Color primary = const Color.fromRGBO(99, 71, 235, 1);
   static Color secondary = const Color.fromRGBO(244, 96, 64, 1);
+  static Color secondaryTwo = const Color.fromRGBO(86, 186, 218, 1);
   static Color orange = const Color.fromRGBO(248, 135, 54, 1);
   static Color greenAccent = const Color.fromRGBO(49, 180, 71, 1);
   static Color neutralDark = const Color.fromRGBO(19, 17, 23, 1);

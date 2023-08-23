@@ -24,12 +24,12 @@ class _TotalBillsState extends State<TotalBills> {
       decoration: BoxDecoration(
           border: Border.all(color: AppColors.neutralLight1),
           borderRadius: BorderRadius.circular(18),
-          boxShadow: [
+          boxShadow: const [
             BoxShadow(
-              color: Colors.white.withOpacity(0),
+              color: Color.fromRGBO(0, 0, 0, .06),
               blurRadius: 40,
               spreadRadius: -10,
-              offset: const Offset(0, 25),
+              offset: Offset(0, 25),
             )
           ]),
       child: Column(
@@ -51,7 +51,7 @@ class _TotalBillsState extends State<TotalBills> {
                     '\$${widget.remainder}',
                     style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         color: AppColors.neutral,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w700,
                         fontSize: 18),
                   )
                 ],
@@ -70,14 +70,14 @@ class _TotalBillsState extends State<TotalBills> {
                     '\$${widget.monthlyBudget}',
                     style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         color: AppColors.neutral,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w700,
                         fontSize: 18),
                   )
                 ],
               )
             ],
           ),
-          const SizedBox(height: 15),
+          const SizedBox(height: 10),
           LayoutBuilder(
             builder: (_, constraints) => Stack(
               children: [
@@ -86,10 +86,13 @@ class _TotalBillsState extends State<TotalBills> {
                     width: getPercentage(100, constraints.maxWidth),
                     color: AppColors.neutralLight1),
                        ProgressValue(
-                    width: getPercentage(70, constraints.maxWidth),
+                    width: getPercentage(60, constraints.maxWidth),
                     color: AppColors.primary),
+                        ProgressValue(
+                    width: getPercentage(30, constraints.maxWidth),
+                    color: AppColors.secondaryTwo),
                        ProgressValue(
-                    width: getPercentage(40, constraints.maxWidth),
+                    width: getPercentage(15, constraints.maxWidth),
                     color: AppColors.secondary)
               ],
             ),
