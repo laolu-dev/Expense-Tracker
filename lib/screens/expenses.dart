@@ -116,6 +116,32 @@ class _ExpensesState extends State<Expenses> {
                       remainder: 30,
                       expense: 'Maintenance'),
                 ],
+              ),
+              const SizedBox(width: 12),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
+                    width: 4,
+                    height: 4,
+                    decoration: const BoxDecoration(
+                        color: Colors.black, shape: BoxShape.circle),
+                  ),
+                  const SizedBox(width: 2),
+                  Container(
+                    width: 4,
+                    height: 4,
+                    decoration: const BoxDecoration(
+                        color: Colors.black, shape: BoxShape.circle),
+                  ),
+                  const SizedBox(width: 2),
+                  Container(
+                    width: 4,
+                    height: 4,
+                    decoration: const BoxDecoration(
+                        color: Colors.black, shape: BoxShape.circle),
+                  )
+                ],
               )
             ],
           ),
