@@ -54,7 +54,8 @@ class SignIn extends StatelessWidget {
                     ),
                     const SizedBox(height: 60),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () =>
+                          Navigator.pushNamed(context, Screen.testarea.name),
                       style: TextButton.styleFrom(
                         backgroundColor: AppColors.primary,
                         shape: RoundedRectangleBorder(

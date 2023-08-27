@@ -4,7 +4,6 @@ import 'package:demo/widgets/bills.dart';
 import 'package:demo/widgets/nav_bar.dart';
 import 'package:demo/widgets/total_bills.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import '../widgets/expense_item.dart';
 
 class Expenses extends StatefulWidget {
